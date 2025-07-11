@@ -1,4 +1,4 @@
-package com.kloc.firstdemo.login.service;
+package com.kloc.firstdemo.service;
 
 import org.springframework.stereotype.Service;
 

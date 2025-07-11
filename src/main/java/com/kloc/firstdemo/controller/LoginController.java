@@ -1,14 +1,16 @@
-package com.kloc.firstdemo.login.controller;
+package com.kloc.firstdemo.controller;
 
-import com.kloc.firstdemo.login.service.AuthenticationService;
+import com.kloc.firstdemo.service.AuthenticationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 @Controller
+@SessionAttributes("username")
 public class LoginController {
 
     @Autowired
@@ -22,6 +24,7 @@ public class LoginController {
     @PostMapping("/login")
     public String logUserIn(@RequestParam String login, @RequestParam String password, ModelMap m) {
         if (auth.authenticate(login, password)) {
+            m.put("username", login);
             return "welcome";
         }
         m.put("error", "Podano nieprawidłowy login lub hasło.");

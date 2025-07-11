@@ -10,7 +10,7 @@
 <body>
     <div>
         <h1>Welcome on my website ${username}!</h1>
-        <a href="/list-todos">Check your todos ! :D</a>
+        todo: here a table with todos will go
     </div>
 </body>
 </html>
