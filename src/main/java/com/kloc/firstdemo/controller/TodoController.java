@@ -16,7 +16,7 @@ public class TodoController {
 
     @GetMapping("list-todos")
     public String getUsersTodos(ModelMap m) {
-        m.addAllAttributes(todoService.getUsersTodos());
+        m.put("todos", todoService.getUsersTodos());
         return "todoList";
     }
 }

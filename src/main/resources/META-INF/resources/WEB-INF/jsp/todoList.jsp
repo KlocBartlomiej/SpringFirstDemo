@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -10,7 +11,20 @@
 <body>
     <div>
         <h1>Welcome on my website ${username}!</h1>
-        todo: here a table with todos will go
+        <table>
+            <tr>
+                <th>description</th>
+                <th>targetDate</th>
+                <th>done</th>
+            </tr>
+            <jstl:forEach items="${todos}" var="todo">
+                <tr>
+                    <td>${todo.description}</td>
+                    <td>${todo.targetDate}</td>
+                    <td>${todo.done}</td>
+                </tr>
+            </jstl:forEach>
+        </table>
     </div>
 </body>
 </html>
