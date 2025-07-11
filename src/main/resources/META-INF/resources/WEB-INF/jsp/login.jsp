@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -7,6 +8,25 @@
     <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
 </head>
 <body>
-    This will be a login page.
+    <div>
+        <form method="post">
+            <h1>Zaloguj się</h1>
+            <h3 style="color:red">${error}</h3>
+            <br><br>
+
+            <label for="login">Proszę podać login:</label>
+            <br>
+            <input type="text" id="login" name="login" placeholder="login" required>
+            <br><br>
+
+            <label for="password">Proszę podać haslo:</label>
+            <br>
+            <input type="password" id="password" name="password" placeholder="password" required>
+            <br><br>
+
+            <input type="submit" name="log-in" value="Zaloguj">
+            <br><br>
+        </form>
+    </div>
 </body>
 </html>
