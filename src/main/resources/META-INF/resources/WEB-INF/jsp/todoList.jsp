@@ -7,11 +7,12 @@
     <title>Login page</title>
     <meta name="description" content="TODO app">
     <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="webjars\bootstrap\5.3.3\css\bootstrap.min.css">
 </head>
 <body>
-    <div>
+    <div class="container">
         <h1>Welcome on my website ${username}!</h1>
-        <table>
+        <table class="table">
             <tr>
                 <th>description</th>
                 <th>targetDate</th>
@@ -26,5 +27,7 @@
             </jstl:forEach>
         </table>
     </div>
+    <script src="webjars\bootstrap\5.3.3\js\bootstrap.min.js"></script>
+    <script src="webjars\jquery\3.7.1\jquery.min.js"></script>
 </body>
 </html>
